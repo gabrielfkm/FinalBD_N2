@@ -309,7 +309,181 @@ INSERT INTO ENDERECO (cpf_usuario, logradouro, numero, complemento, bairro, cida
 
 -- TABELA PRODUTO 
 
-
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Cupiditate 51Sl', 'Unde aspernatur consequatur ad reiciendis accusamus odit vitae iure.', 2650.95, 50, 1, 'Samsung', '6687513724704', 'https://example.com/produtos/1.jpg', '2023-09-28 16:50:31', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Hic 84Xl', 'Rerum harum at corrupti quisquam ad nihil atque.', 3520.78, 50, 1, 'Xiaomi', '5013034040473', 'https://example.com/produtos/2.jpg', '2025-03-05 01:56:55', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Quia 99mI', 'Laudantium eius culpa ex voluptatem accusamus nesciunt ipsa.', 923.25, 50, 1, 'Samsung', '6853929037732', 'https://example.com/produtos/3.jpg', '2023-11-12 13:02:28', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Cum 57cP', 'Quam facilis doloremque non aspernatur id ex ea exercitationem alias hic quisquam recusandae.', 13998.86, 50, 1, 'Apple', '4438292307143', 'https://example.com/produtos/4.jpg', '2024-08-13 15:23:37', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Quas 74sS', 'Nostrum neque quaerat nemo commodi quos magni sequi.', 8364.79, 50, 1, 'Motorola', '6655232200564', 'https://example.com/produtos/5.jpg', '2025-02-10 15:32:02', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Tenetur 32aD', 'Quo fugit officiis ea iure deleniti recusandae sapiente.', 8884.57, 50, 1, 'Xiaomi', '2876952473678', 'https://example.com/produtos/6.jpg', '2024-04-08 22:59:18', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Corrupti 01LL', 'Odio vitae harum inventore eaque aliquam incidunt impedit itaque expedita.', 11626.18, 50, 1, 'Xiaomi', '6073548889240', 'https://example.com/produtos/7.jpg', '2025-06-30 07:23:14', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Illo 60Me', 'Est voluptatem dignissimos quam iure laboriosam.', 12697.8, 50, 1, 'Motorola', '8052495883967', 'https://example.com/produtos/8.jpg', '2024-05-09 11:03:19', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Odit 37NK', 'Ea aperiam repellat in dolorum repudiandae sint animi omnis tempore natus minus debitis.', 630.78, 50, 1, 'Samsung', '6559018142140', 'https://example.com/produtos/9.jpg', '2023-11-19 19:13:25', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Repellendus 13wz', 'Id odio doloribus quos eligendi quasi unde consequatur assumenda.', 2313.01, 50, 1, 'Samsung', '5898267323414', 'https://example.com/produtos/10.jpg', '2025-06-14 05:03:57', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Culpa 44RW', 'Officiis nihil dignissimos placeat libero dolor ipsam soluta.', 6509.45, 50, 1, 'Motorola', '3400514352409', 'https://example.com/produtos/11.jpg', '2024-10-27 07:15:00', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Ipsa 81mv', 'Dolores pariatur ipsa consequuntur ipsum incidunt fugiat ad placeat a eaque odit architecto.', 767.34, 50, 1, 'Motorola', '5073829094081', 'https://example.com/produtos/12.jpg', '2023-08-13 16:13:26', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Dolor 96ma', 'Eveniet odit excepturi repellendus quae repudiandae.', 1348.75, 50, 1, 'Samsung', '9285421825949', 'https://example.com/produtos/13.jpg', '2023-12-03 08:09:21', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple In 08fb', 'Voluptatibus laborum nam adipisci ipsum autem impedit ipsum beatae magni laborum numquam aliquam.', 8392.24, 50, 1, 'Apple', '7911493085869', 'https://example.com/produtos/14.jpg', '2024-12-27 18:35:28', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Aliquid 94lu', 'Aliquid voluptatum voluptatibus odio ab pariatur delectus inventore consequuntur laudantium.', 5930.12, 50, 1, 'Samsung', '1373311758922', 'https://example.com/produtos/15.jpg', '2023-10-16 02:33:03', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Sapiente 45TE', 'Nihil delectus alias enim odit deserunt error hic expedita qui maxime accusantium.', 12929.91, 50, 1, 'Motorola', '4088843066595', 'https://example.com/produtos/16.jpg', '2024-11-18 00:41:59', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Qui 77Rb', 'Sed quasi quae est praesentium ullam inventore.', 12566.13, 50, 1, 'Apple', '0182034163781', 'https://example.com/produtos/17.jpg', '2025-01-29 04:00:35', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Doloremque 68ux', 'Sapiente repudiandae ratione similique laudantium suscipit voluptates minima debitis consectetur quasi.', 10983.71, 50, 1, 'Motorola', '5308279643085', 'https://example.com/produtos/18.jpg', '2024-08-18 05:53:16', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Explicabo 07Dl', 'Doloremque dicta architecto laborum eaque culpa voluptatibus.', 5656.35, 50, 1, 'Xiaomi', '0140108045593', 'https://example.com/produtos/19.jpg', '2023-07-24 02:15:30', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Nihil 70fB', 'Eos cum nemo alias velit dolor.', 4187.96, 50, 1, 'Xiaomi', '6997589451078', 'https://example.com/produtos/20.jpg', '2025-01-11 03:05:47', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Inventore 55ve', 'Eum veniam eveniet ad quisquam necessitatibus quas velit quisquam.', 6788.03, 50, 1, 'Apple', '6173463339681', 'https://example.com/produtos/21.jpg', '2024-11-11 22:47:41', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Amet 47bV', 'Accusamus eaque neque inventore iure quas dolores iusto maiores quia explicabo.', 10291.68, 50, 1, 'Xiaomi', '9357976321662', 'https://example.com/produtos/22.jpg', '2024-08-12 08:12:06', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Officiis 28Tv', 'Nisi unde excepturi et soluta aspernatur libero recusandae officia nulla.', 7945.14, 50, 1, 'Samsung', '3510639289518', 'https://example.com/produtos/23.jpg', '2025-06-15 01:52:21', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Tempore 11dH', 'Odio enim modi vero quia minus provident minima et quasi ea ullam suscipit.', 13419.12, 50, 1, 'Apple', '4088550969646', 'https://example.com/produtos/24.jpg', '2025-03-27 21:59:03', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Pariatur 78WO', 'Aut tempore excepturi facilis labore nam voluptatem fuga nesciunt tenetur quis quis.', 8133.8, 50, 1, 'Xiaomi', '2318929677677', 'https://example.com/produtos/25.jpg', '2024-06-27 20:35:14', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Expedita 20on', 'Accusantium ea aliquam dolores facilis ab magni recusandae dolorem.', 2245.63, 50, 1, 'Xiaomi', '8818881804868', 'https://example.com/produtos/26.jpg', '2024-02-07 10:18:38', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Assumenda 57tl', 'Dignissimos necessitatibus voluptas exercitationem placeat corrupti quidem porro.', 7851.91, 50, 1, 'Apple', '9919764314654', 'https://example.com/produtos/27.jpg', '2025-01-05 13:14:32', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Consectetur 63qb', 'Possimus sunt rerum et quaerat odio veritatis distinctio.', 9028.09, 50, 1, 'Apple', '8720406096866', 'https://example.com/produtos/28.jpg', '2025-05-22 11:13:58', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Consequuntur 75Da', 'Consectetur beatae unde ex reprehenderit ullam laudantium.', 7856.71, 50, 1, 'Samsung', '3866106995674', 'https://example.com/produtos/29.jpg', '2023-09-18 01:56:09', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Consectetur 81yS', 'Minima ullam dolorem ratione quas ea nisi neque natus.', 2316.44, 50, 1, 'Motorola', '9504815136394', 'https://example.com/produtos/30.jpg', '2023-12-31 22:24:44', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Voluptatum 21wF', 'Quo ipsum distinctio vero quasi quidem quia earum minima eveniet.', 1333.48, 50, 1, 'Apple', '8794213150899', 'https://example.com/produtos/31.jpg', '2024-01-23 03:20:52', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Impedit 48mi', 'Beatae reiciendis repellat porro tempore magnam maiores fugit consequuntur veniam a sint.', 14408.01, 50, 1, 'Xiaomi', '7001283329348', 'https://example.com/produtos/32.jpg', '2023-10-03 11:44:29', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Iusto 42Ws', 'Alias sunt modi aperiam et quod.', 6032.65, 50, 1, 'Xiaomi', '3511969811684', 'https://example.com/produtos/33.jpg', '2024-09-22 16:20:30', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Perferendis 30uz', 'Quam delectus cumque soluta architecto repellendus tenetur nam.', 14819.0, 50, 1, 'Motorola', '2457319301621', 'https://example.com/produtos/34.jpg', '2024-03-25 03:01:00', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Temporibus 41hH', 'Necessitatibus ipsum deleniti dolore eos voluptatem tenetur hic dicta consequuntur laborum dolorum.', 10926.65, 50, 1, 'Xiaomi', '5499848492200', 'https://example.com/produtos/35.jpg', '2024-10-27 17:29:08', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Fugit 01pF', 'Voluptates error temporibus velit quisquam distinctio corporis nostrum illo labore.', 1671.41, 50, 1, 'Apple', '1152354584336', 'https://example.com/produtos/36.jpg', '2023-10-30 16:42:58', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Nesciunt 49Fe', 'Vel facere architecto expedita voluptatum nihil assumenda nobis assumenda.', 3144.34, 50, 1, 'Xiaomi', '7078326217498', 'https://example.com/produtos/37.jpg', '2023-10-09 03:29:59', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Nobis 96Tf', 'Minus doloribus atque eos voluptatem soluta.', 5888.43, 50, 1, 'Xiaomi', '8526060046250', 'https://example.com/produtos/38.jpg', '2025-06-08 08:24:41', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Corrupti 05KO', 'Deleniti quas facilis nulla aperiam sint soluta magni dolore explicabo.', 14564.31, 50, 1, 'Xiaomi', '6565922604919', 'https://example.com/produtos/39.jpg', '2024-12-07 20:14:49', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Voluptates 01ze', 'Laborum ipsum id commodi maiores necessitatibus sequi mollitia iure.', 3583.03, 50, 1, 'Motorola', '1279674740812', 'https://example.com/produtos/40.jpg', '2024-10-19 12:38:24', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Cupiditate 44vM', 'Illo accusamus dolores fuga laboriosam dolorum amet magnam reprehenderit vero iure.', 14025.89, 50, 1, 'Apple', '4490254988746', 'https://example.com/produtos/41.jpg', '2024-07-10 04:26:03', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Excepturi 80Qd', 'Tenetur fuga ipsum expedita quod corrupti fugiat nulla neque consequuntur quia recusandae pariatur.', 2285.34, 50, 1, 'Samsung', '7566886064749', 'https://example.com/produtos/42.jpg', '2023-12-02 05:24:12', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Nobis 18NH', 'Voluptas id nemo eligendi commodi explicabo est.', 7892.01, 50, 1, 'Motorola', '5807051300791', 'https://example.com/produtos/43.jpg', '2024-04-29 17:44:07', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Nulla 44Ad', 'Recusandae totam aut beatae reprehenderit tenetur.', 10082.22, 50, 1, 'Xiaomi', '9558546927257', 'https://example.com/produtos/44.jpg', '2025-06-03 09:11:13', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Samsung Iure 93QV', 'Fugiat veritatis sit laudantium ab architecto.', 522.16, 50, 1, 'Apple', '3017095565335', 'https://example.com/produtos/45.jpg', '2024-11-19 23:44:05', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Motorola Iure 66pt', 'Cumque quibusdam possimus reiciendis animi suscipit quam ut maiores fuga nulla eos sit.', 1123.47, 50, 1, 'Xiaomi', '2608595547177', 'https://example.com/produtos/46.jpg', '2024-06-01 04:07:07', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Sint 91Tr', 'Sapiente neque incidunt doloremque cupiditate fuga soluta.', 2128.15, 50, 1, 'Xiaomi', '2758542857580', 'https://example.com/produtos/47.jpg', '2024-01-30 19:29:15', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Aliquam 49sI', 'Facere repellat corporis minima ipsa dolorum sed saepe quam officiis nihil nisi esse.', 4971.55, 50, 1, 'Samsung', '1413581323489', 'https://example.com/produtos/48.jpg', '2024-08-04 22:51:19', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Xiaomi Deleniti 57xE', 'Aut earum reprehenderit nisi quod libero dicta minus deserunt nihil.', 4297.32, 50, 1, 'Motorola', '4183551993796', 'https://example.com/produtos/49.jpg', '2024-09-03 17:05:37', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Apple Ducimus 53ED', 'Enim sed sint voluptate beatae doloremque ea id ea.', 667.53, 50, 1, 'Xiaomi', '0385199598942', 'https://example.com/produtos/50.jpg', '2024-12-31 10:13:30', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Acer Dolorum 42BN', 'Quisquam aperiam reiciendis minus facere quia est nam dicta repellendus voluptatibus.', 5063.81, 50, 2, 'Dell', '2516794520085', 'https://example.com/produtos/51.jpg', '2024-04-23 04:42:09', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Acer Veniam 25FE', 'Culpa alias sapiente quis temporibus ipsa.', 13679.5, 50, 2, 'Dell', '4378398751313', 'https://example.com/produtos/52.jpg', '2024-01-11 13:25:21', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Lenovo Sunt 34kn', 'Facilis placeat voluptatum cupiditate optio quibusdam ea ratione illo laboriosam ipsum dolor quae.', 8133.67, 50, 2, 'Acer', '2953319917867', 'https://example.com/produtos/53.jpg', '2025-03-13 08:26:34', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Dell Explicabo 50Nw', 'Optio fugiat excepturi excepturi delectus quos.', 7044.68, 50, 2, 'Dell', '7783582686208', 'https://example.com/produtos/54.jpg', '2023-12-25 00:45:50', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Acer Repudiandae 57qQ', 'Mollitia consequatur culpa aliquam dolore doloribus.', 8248.66, 50, 2, 'Dell', '0712095199698', 'https://example.com/produtos/55.jpg', '2024-09-06 23:00:06', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Asus Consequuntur 47bK', 'Rerum reiciendis totam quia animi fugiat mollitia quia doloremque provident.', 4131.32, 50, 2, 'Dell', '5645903421283', 'https://example.com/produtos/56.jpg', '2023-10-26 23:44:49', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Acer Consectetur 46MG', 'Fugiat vel sunt repellat ab repellendus mollitia dolore architecto labore repudiandae sequi delectus natus.', 3605.08, 50, 2, 'Asus', '0010331496861', 'https://example.com/produtos/57.jpg', '2025-07-04 02:48:53', TRUE
+);
+INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codigo_barras, imagem_url, data_cadastro, ativo) VALUES (
+  'Lenovo Adipisci 65Aj', 'Dolor repellendus facilis quibusdam optio nihil voluptates laborum quos.', 833.59, 50, 2, 'Lenovo', '2582762431851', 'https://example.com/produtos/58.jpg', '2024-12-08 05:48:13', TRUE
+);
+INSERT INTO PRODUTO (nome, descric
 
 -- TABELA USUARIO
 INSERT INTO USUARIO (cpf, nome, email, senha_hash, telefone) VALUES
