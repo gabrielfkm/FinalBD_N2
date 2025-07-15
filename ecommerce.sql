@@ -47,14 +47,14 @@ CREATE TABLE USUARIO (
 
 CREATE TABLE PEDIDO (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    cpf_cliente VARCHAR(14),
+    cpf_usuario VARCHAR(14),
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
     status VARCHAR(30) DEFAULT 'Em processamento',
     quantidade INT,
     preco_unitario DECIMAL(10,2),
     valor_total DECIMAL(10,2),
     endereco_entrega_id INT,
-    FOREIGN KEY (cpf_cliente) REFERENCES CLIENTE(cpf),
+    FOREIGN KEY (cpf_usuario) REFERENCES USUARIO(cpf),
     FOREIGN KEY (endereco_entrega_id) REFERENCES ENDERECO(id_endereco)
 );
 
