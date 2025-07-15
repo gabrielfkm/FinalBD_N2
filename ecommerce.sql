@@ -5985,23 +5985,26 @@ VALUES
 
     
 -- Views
--- quantidade de vendas por estado
+-- verifica a quantidade vendas por estado
 CREATE OR REPLACE VIEW vw_vendas_por_estado AS
 SELECT e.estado, COUNT(p.id_pedido) AS total_vendas
 FROM pedido p
 JOIN endereco e ON p.endereco_entrega_id = e.id_endereco
 GROUP BY e.estado;
--- verificação de estoque 
+
+-- verifica o estoque 
 CREATE OR REPLACE VIEW vw_estoque_produtos AS
 SELECT nome, quantidade_estoque
 FROM produto
 WHERE quantidade_estoque > 0;
+
 -- lista produtos por categoria 
 CREATE OR REPLACE VIEW vw_produtos_por_categoria AS
 SELECT c.nome AS categoria, p.nome AS produto
 FROM produto p
 JOIN categoria c ON p.id_categoria = c.id_categoria
 ORDER BY c.nome, p.nome;
+
 -- lista vendas por categorias 
 CREATE OR REPLACE VIEW vw_vendas_por_categoria AS
 SELECT c.nome AS categoria, COUNT(ip.id_item) AS total_vendas
@@ -6010,12 +6013,14 @@ JOIN produto p ON ip.id_produto = p.id_produto
 JOIN categoria c ON p.id_categoria = c.id_categoria
 GROUP BY c.nome
 ORDER BY total_vendas DESC;
+
 -- 
 CREATE OR REPLACE VIEW vw_status_envio_pedidos AS
 SELECT p.id_pedido, p.cpf_cliente, e.status_envio, e.codigo_rastreamento
 FROM pedido p
 JOIN envio e ON p.id_pedido = e.id_pedido
 ORDER BY p.id_pedido;
+
 --
 CREATE OR REPLACE VIEW vw_produtos_mais_vendidos_mes AS
 SELECT 
@@ -6027,6 +6032,7 @@ JOIN pedido pe ON ip.id_pedido = pe.id_pedido
 JOIN produto pr ON ip.id_produto = pr.id_produto
 GROUP BY mes, pr.nome
 ORDER BY mes, total_vendido DESC;
+
 -- 
 CREATE OR REPLACE VIEW vw_produtos_menos_vendidos_mes AS
 SELECT 
@@ -6038,12 +6044,14 @@ JOIN pedido pe ON ip.id_pedido = pe.id_pedido
 JOIN produto pr ON ip.id_produto = pr.id_produto
 GROUP BY mes, pr.nome
 ORDER BY mes, total_vendido ASC;
---
+
+-- lista produtos por marca
 CREATE OR REPLACE VIEW vw_produtos_por_marca AS
 SELECT marca, nome AS produto
 FROM produto
 ORDER BY marca, nome;
---
+
+-- rankeia clientes
 CREATE OR REPLACE VIEW vw_ranking_clientes AS
 SELECT u.nome, u.cpf, COUNT(p.id_pedido) AS total_pedidos
 FROM pedido p
