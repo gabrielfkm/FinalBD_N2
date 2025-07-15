@@ -6002,10 +6002,20 @@ SELECT c.nome AS categoria, p.nome AS produto
 FROM produto p
 JOIN categoria c ON p.id_categoria = c.id_categoria
 ORDER BY c.nome, p.nome;
+-- lista vendas por categorias 
+CREATE OR REPLACE VIEW vw_vendas_por_categoria AS
+SELECT c.nome AS categoria, COUNT(ip.id_item) AS total_vendas
+FROM item_pedido ip
+JOIN produto p ON ip.id_produto = p.id_produto
+JOIN categoria c ON p.id_categoria = c.id_categoria
+GROUP BY c.nome
+ORDER BY total_vendas DESC;
 -- 
-
-
-
+CREATE OR REPLACE VIEW vw_status_envio_pedidos AS
+SELECT p.id_pedido, p.cpf_cliente, e.status_envio, e.codigo_rastreamento
+FROM pedido p
+JOIN envio e ON p.id_pedido = e.id_pedido
+ORDER BY p.id_pedido;
 
 
 -- Triggers
