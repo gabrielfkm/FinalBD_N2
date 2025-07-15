@@ -6051,6 +6051,31 @@ VALUES
 
 
 -- Triggers
+-- atualiza o status de PEDIDO conforme ENVIO e PAGAMENTO 
+CREATE OR REPLACE FUNCTION fn_update_status_after_payment()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.status = 'Aguardando pagamento' THEN
+    UPDATE pedido SET status = 'Aguardando pagamento' WHERE id_pedido = NEW.id_pedido;
+    UPDATE envio SET status = 'Aguardando pagamento' WHERE id_pedido = NEW.id_pedido;
+  ELSIF NEW.status = 'Aprovado' THEN
+    UPDATE pedido SET status = 'Aguardando envio' WHERE id_pedido = NEW.id_pedido;
+    UPDATE envio SET status = 'Aguardando envio' WHERE id_pedido = NEW.id_pedido;
+  ELSIF NEW.status = 'Recusado' THEN
+    UPDATE pedido SET status = 'Pedido não aprovado' WHERE id_pedido = NEW.id_pedido;
+    UPDATE envio SET status = 'Pedido não aprovado' WHERE id_pedido = NEW.id_pedido;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trg_update_status_after_payment
+AFTER UPDATE OF status ON pagamento
+FOR EACH ROW
+EXECUTE FUNCTION fn_update_status_after_payment();
+
+-- 
+
 
 
 -- Procedures
