@@ -9,7 +9,7 @@ CREATE TABLE CATEGORIA (
 
 CREATE TABLE ENDERECO (
     id_endereco INT AUTO_INCREMENT PRIMARY KEY,
-    cpf_cliente VARCHAR(14),
+    cpf_usuario VARCHAR(14),
     logradouro VARCHAR(255) NOT NULL,
     numero VARCHAR(10),
     complemento VARCHAR(50),
@@ -17,7 +17,8 @@ CREATE TABLE ENDERECO (
     cidade VARCHAR(100),
     estado VARCHAR(2),
     cep VARCHAR(10),
-    tipo VARCHAR(20) 
+    tipo VARCHAR(20),
+    FOREIGN KEY (cpf_usuario) REFERENCES USUARIO(cpf)
 );
 
 CREATE TABLE PRODUTO (
