@@ -6014,14 +6014,15 @@ JOIN categoria c ON p.id_categoria = c.id_categoria
 GROUP BY c.nome
 ORDER BY total_vendas DESC;
 
--- 
+-- lista pedidos, status de envio e código de rastreamento
+
 CREATE OR REPLACE VIEW vw_status_envio_pedidos AS
 SELECT p.id_pedido, p.cpf_cliente, e.status_envio, e.codigo_rastreamento
 FROM pedido p
 JOIN envio e ON p.id_pedido = e.id_pedido
 ORDER BY p.id_pedido;
 
---
+-- lista os produtos mais vendidos por mês 
 CREATE OR REPLACE VIEW vw_produtos_mais_vendidos_mes AS
 SELECT 
     DATE_TRUNC('month', pe.data_pedido) AS mes,
@@ -6033,7 +6034,7 @@ JOIN produto pr ON ip.id_produto = pr.id_produto
 GROUP BY mes, pr.nome
 ORDER BY mes, total_vendido DESC;
 
--- 
+-- lista os produtos menos vendidos por mês 
 CREATE OR REPLACE VIEW vw_produtos_menos_vendidos_mes AS
 SELECT 
     DATE_TRUNC('month', pe.data_pedido) AS mes,
