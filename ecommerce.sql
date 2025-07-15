@@ -6201,6 +6201,23 @@ AFTER UPDATE OF status ON envio
 FOR EACH ROW
 EXECUTE FUNCTION fn_update_status_after_envio();
 
+-- atualiza o valor total de PEDIDO pela multiplicação de quantidade e preco_unitario de ITEMPEDIDO 
+DELIMITER //
 
+CREATE TRIGGER trg_atualizar_valor_total
+AFTER INSERT ON ITEM_PEDIDO
+FOR EACH ROW
+BEGIN
+  UPDATE PEDIDO
+  SET valor_total = (
+    SELECT SUM(quantidade * preco_unitario)
+    FROM ITEM_PEDIDO
+    WHERE id_pedido = NEW.id_pedido
+  )
+  WHERE id_pedido = NEW.id_pedido;
+END;
+//
+
+DELIMITER ;
 -- TRANSITIONS
 
