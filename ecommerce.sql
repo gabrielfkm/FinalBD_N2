@@ -35,7 +35,7 @@ CREATE TABLE PRODUTO (
     FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria)
 );
 
-CREATE TABLE CLIENTE (
+CREATE TABLE USUARIO (
     cpf VARCHAR(14) UNIQUE NOT NULL PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
@@ -50,6 +50,8 @@ CREATE TABLE PEDIDO (
     cpf_cliente VARCHAR(14),
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
     status VARCHAR(30) DEFAULT 'Em processamento',
+    quantidade INT,
+    preco_unitario DECIMAL(10,2),
     valor_total DECIMAL(10,2),
     endereco_entrega_id INT,
     FOREIGN KEY (cpf_cliente) REFERENCES CLIENTE(cpf),
@@ -75,13 +77,6 @@ CREATE TABLE ENVIO (
     status_envio VARCHAR(30),
     FOREIGN KEY (id_pedido) REFERENCES PEDIDO(id_pedido)
 );
-
--- Correções
-
-ALTER TABLE PEDIDO ADD quantidade INT;
-ALTER TABLE PEDIDO ADD preco_unitario DECIMAL(10,2);
-
-RENAME TABLE CLIENTE TO USUARIO;
 
 -- Inserção de dados 
 -- TABELA CATEGORIA
