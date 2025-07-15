@@ -5996,7 +5996,13 @@ CREATE OR REPLACE VIEW vw_estoque_produtos AS
 SELECT nome, quantidade_estoque
 FROM produto
 WHERE quantidade_estoque > 0;
---
+-- lista produtos por categoria 
+CREATE OR REPLACE VIEW vw_produtos_por_categoria AS
+SELECT c.nome AS categoria, p.nome AS produto
+FROM produto p
+JOIN categoria c ON p.id_categoria = c.id_categoria
+ORDER BY c.nome, p.nome;
+-- 
 
 
 
