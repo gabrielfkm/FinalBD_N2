@@ -6060,7 +6060,66 @@ JOIN usuario u ON p.cpf_cliente = u.cpf
 GROUP BY u.nome, u.cpf
 ORDER BY total_pedidos DESC;
 
+-- PROCEDURES
+-- aplica desconto
+DELIMITER //
 
+CREATE PROCEDURE sp_aplicar_desconto_produto(
+    IN produto_id INT,
+    IN percentual DECIMAL(5,2)
+)
+BEGIN
+    UPDATE produto
+    SET preco = preco * (1 - percentual / 100)
+    WHERE id_produto = produto_id;
+END //
+
+DELIMITER ;
+
+-- aumenta preço 
+DELIMITER //
+
+CREATE PROCEDURE sp_aumentar_preco_produto(
+    IN produto_id INT,
+    IN percentual DECIMAL(5,2)
+)
+BEGIN
+    UPDATE produto
+    SET preco = preco * (1 + percentual / 100)
+    WHERE id_produto = produto_id;
+END //
+
+DELIMITER ;
+
+-- atualiza estoque
+DELIMITER //
+
+CREATE PROCEDURE sp_entrada_estoque(
+    IN produto_id INT,
+    IN quantidade INT
+)
+BEGIN
+    UPDATE produto
+    SET estoque = estoque + quantidade
+    WHERE id_produto = produto_id;
+END //
+
+DELIMITER ;
+
+-- atualiza preço dos produtos 
+DELIMITER //
+
+CREATE PROCEDURE sp_atualizar_preco_produto(
+    IN produto_id INT,
+    IN novo_preco DECIMAL(10,2)
+)
+BEGIN
+    UPDATE produto
+    SET preco = novo_preco
+    WHERE id_produto = produto_id;
+END //
+
+DELIMITER ;
 
 
 
@@ -6088,7 +6147,7 @@ AFTER UPDATE OF status ON pagamento
 FOR EACH ROW
 EXECUTE FUNCTION fn_update_status_after_payment();
 
--- atualiza o status de PEDIDO conforme ENVIO entra em enviado ou entregue.
+-- atualiza o status de PEDIDO conforme ENVIO entra em enviado, entregue ou em transporte.
 CREATE OR REPLACE FUNCTION fn_update_status_after_envio()
 RETURNS TRIGGER AS $$
 BEGIN
