@@ -6125,6 +6125,40 @@ DELIMITER ;
 
 
 -- TRIGGERS
+
+-- Das orientações 
+-- retirar um produto do estoque quando ele for vendido 
+DELIMITER //
+
+CREATE TRIGGER trg_descontar_estoque
+AFTER INSERT ON ITEM_PEDIDO
+FOR EACH ROW
+BEGIN
+  UPDATE PRODUTO
+  SET estoque = estoque - NEW.quantidade
+  WHERE id_produto = NEW.id_produto;
+END;
+//
+
+DELIMITER ;
+
+-- alertar pouco estoque
+DELIMITER //
+
+CREATE TRIGGER trg_estoque_minimo
+AFTER UPDATE ON PRODUTO
+FOR EACH ROW
+BEGIN
+  IF NEW.estoque <= 5 THEN
+    SIGNAL SQLSTATE '45000'
+    SET MESSAGE_TEXT = CONCAT('Alerta: Estoque baixo para o produto ID ', NEW.id_produto, '. Restam apenas ', NEW.estoque, ' unidades.');
+  END IF;
+END;
+//
+
+DELIMITER ;
+
+-- Do BD
 -- atualiza o status de PEDIDO conforme ENVIO e PAGAMENTO 
 CREATE OR REPLACE FUNCTION fn_update_status_after_payment()
 RETURNS TRIGGER AS $$
