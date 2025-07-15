@@ -6221,16 +6221,3 @@ END;
 DELIMITER ;
 
 
--- TRANSACTION
-START TRANSACTION;
-
--- Insere cliente
-INSERT INTO USUARIO (cpf, nome, email, senha_hash, telefone)
-VALUES ('111.222.333-44', 'João Exemplo', 'joao@example.com', 'hash_senha123', '31999999999');
-
--- Insere endereço vinculado ao cliente
-INSERT INTO ENDERECO (cpf_cliente, logradouro, numero, complemento, bairro, cidade, estado, cep, tipo)
-VALUES ('111.222.333-44', 'Rua das Flores', '123', 'Apto 101', 'Centro', 'Belo Horizonte', 'MG', '30130-010', 'Residencial');
-
-COMMIT;
-
