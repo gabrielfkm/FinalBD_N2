@@ -1,15 +1,27 @@
 CREATE DATABASE ECOMMERCE;
 USE ECOMMERCE;
 
+-- TABELA CATEGORIA
 CREATE TABLE CATEGORIA (
     id_categoria INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT
 );
 
+-- TABELA USUARIO
+CREATE TABLE USUARIO (
+    cpf VARCHAR(14) PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha_hash VARCHAR(255) NOT NULL,
+    telefone VARCHAR(20),
+    datahora_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+-- TABELA ENDERECO
 CREATE TABLE ENDERECO (
     id_endereco INT AUTO_INCREMENT PRIMARY KEY,
-    cpf_usuario VARCHAR(14),
+    cpf_cliente VARCHAR(14),
     logradouro VARCHAR(255) NOT NULL,
     numero VARCHAR(10),
     complemento VARCHAR(50),
@@ -18,47 +30,49 @@ CREATE TABLE ENDERECO (
     estado VARCHAR(2),
     cep VARCHAR(10),
     tipo VARCHAR(20),
-    FOREIGN KEY (cpf_usuario) REFERENCES USUARIO(cpf)
+    FOREIGN KEY (cpf_cliente) REFERENCES USUARIO(cpf)
 );
 
+-- TABELA PRODUTO
 CREATE TABLE PRODUTO (
     id_produto INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     descricao TEXT,
     preco DECIMAL(10,2) NOT NULL,
     estoque INT DEFAULT 0,
-	id_categoria INT,
+    id_categoria INT,
     marca VARCHAR(100),
     codigo_barras VARCHAR(20),
     imagem_url VARCHAR(255),
-    data_cadastro DATETIME,
-    ativo BOOLEAN,
+    data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ativo BOOLEAN DEFAULT TRUE NOT NULL,
     FOREIGN KEY (id_categoria) REFERENCES CATEGORIA(id_categoria)
 );
 
-CREATE TABLE USUARIO (
-    cpf VARCHAR(14) UNIQUE NOT NULL PRIMARY KEY,
-    nome VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    senha_hash VARCHAR(255) NOT NULL,
-    telefone VARCHAR(20),
-    datahora_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
-);
-
-
+-- TABELA PEDIDO
 CREATE TABLE PEDIDO (
-    id_pedido INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    cpf_usuario VARCHAR(14),
+    id_pedido INT AUTO_INCREMENT PRIMARY KEY,
+    cpf_cliente VARCHAR(14),
     data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
     status VARCHAR(30) DEFAULT 'Em processamento',
-    quantidade INT,
-    preco_unitario DECIMAL(10,2),
     valor_total DECIMAL(10,2),
     endereco_entrega_id INT,
-    FOREIGN KEY (cpf_usuario) REFERENCES USUARIO(cpf),
+    FOREIGN KEY (cpf_cliente) REFERENCES USUARIO(cpf),
     FOREIGN KEY (endereco_entrega_id) REFERENCES ENDERECO(id_endereco)
 );
 
+-- NOVA TABELA ITEM_PEDIDO
+CREATE TABLE ITEM_PEDIDO (
+    id_item INT AUTO_INCREMENT PRIMARY KEY,
+    id_pedido INT NOT NULL,
+    id_produto INT NOT NULL,
+    quantidade INT NOT NULL,
+    preco_unitario DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (id_pedido) REFERENCES PEDIDO(id_pedido),
+    FOREIGN KEY (id_produto) REFERENCES PRODUTO(id_produto)
+);
+
+-- TABELA PAGAMENTO
 CREATE TABLE PAGAMENTO (
     id_pagamento INT AUTO_INCREMENT PRIMARY KEY,
     id_pedido INT,
@@ -69,8 +83,9 @@ CREATE TABLE PAGAMENTO (
     FOREIGN KEY (id_pedido) REFERENCES PEDIDO(id_pedido)
 );
 
+-- TABELA ENVIO
 CREATE TABLE ENVIO (
-    id_envio INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
+    id_envio INT AUTO_INCREMENT PRIMARY KEY,
     id_pedido INT,
     data_envio DATETIME,
     transportadora VARCHAR(100),
