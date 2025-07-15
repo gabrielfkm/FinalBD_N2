@@ -6124,7 +6124,7 @@ DELIMITER ;
 
 
 
--- Triggers
+-- TRIGGERS
 -- atualiza o status de PEDIDO conforme ENVIO e PAGAMENTO 
 CREATE OR REPLACE FUNCTION fn_update_status_after_payment()
 RETURNS TRIGGER AS $$
@@ -6168,5 +6168,5 @@ FOR EACH ROW
 EXECUTE FUNCTION fn_update_status_after_envio();
 
 
--- Procedures
+-- TRANSITIONS
 
