@@ -6047,6 +6047,12 @@ VALUES
 (98, '2025-07-14 19:43:02', 'Correios', 'TRK583892BR', 'Enviado'),
 (99, '2025-07-10 19:43:02', 'JadLog', 'TRK612954BR', 'Em transporte'),
 (100, '2025-07-10 19:43:02', 'Correios', 'TRK555667BR', 'Em transporte');
+
+
+
+
+
+
 -- Views
 
 
@@ -6074,8 +6080,23 @@ AFTER UPDATE OF status ON pagamento
 FOR EACH ROW
 EXECUTE FUNCTION fn_update_status_after_payment();
 
--- 
+-- atualiza o status de PEDIDO conforme ENVIO entra em enviado ou entregue.
+CREATE OR REPLACE FUNCTION fn_update_status_after_envio()
+RETURNS TRIGGER AS $$
+BEGIN
+  IF NEW.status = 'Enviado' THEN
+    UPDATE pedido SET status = 'Enviado' WHERE id_pedido = NEW.id_pedido;
+  ELSIF NEW.status = 'Entregue' THEN
+    UPDATE pedido SET status = 'Entregue' WHERE id_pedido = NEW.id_pedido;
+  END IF;
+  RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
 
+CREATE TRIGGER trg_update_status_after_envio
+AFTER UPDATE OF status ON envio
+FOR EACH ROW
+EXECUTE FUNCTION fn_update_status_after_envio();
 
 
 -- Procedures
