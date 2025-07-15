@@ -53,7 +53,7 @@ CREATE TABLE PRODUTO (
 CREATE TABLE PEDIDO (
     id_pedido INT AUTO_INCREMENT PRIMARY KEY,
     cpf_cliente VARCHAR(14),
-    data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
+    data_pedido DATETIME,
     status VARCHAR(30) DEFAULT 'Em processamento',
     valor_total DECIMAL(10,2),
     endereco_entrega_id INT,
@@ -76,7 +76,7 @@ CREATE TABLE ITEM_PEDIDO (
 CREATE TABLE PAGAMENTO (
     id_pagamento INT AUTO_INCREMENT PRIMARY KEY,
     id_pedido INT,
-    data_pagamento DATETIME DEFAULT CURRENT_TIMESTAMP,
+    data_pagamento DATETIME,
     valor DECIMAL(10,2),
     forma_pagamento VARCHAR(30),
     status VARCHAR(20),
