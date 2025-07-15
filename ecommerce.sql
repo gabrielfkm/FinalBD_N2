@@ -5982,6 +5982,8 @@ VALUES
 (95, '2025-07-10 19:43:02', 'JadLog', 'TRK125088BR', 'Em transporte'),
 (100, '2025-07-10 19:43:02', 'Correios', 'TRK555667BR', 'Em transporte');
 
+
+    
 -- Views
 -- quantidade de vendas por estado
 CREATE OR REPLACE VIEW vw_vendas_por_estado AS
@@ -5989,7 +5991,16 @@ SELECT e.estado, COUNT(p.id_pedido) AS total_vendas
 FROM pedido p
 JOIN endereco e ON p.endereco_entrega_id = e.id_endereco
 GROUP BY e.estado;
--- 
+-- verificação de estoque 
+CREATE OR REPLACE VIEW vw_estoque_produtos AS
+SELECT nome, quantidade_estoque
+FROM produto
+WHERE quantidade_estoque > 0;
+--
+
+
+
+
 
 -- Triggers
 -- atualiza o status de PEDIDO conforme ENVIO e PAGAMENTO 
