@@ -6016,6 +6016,44 @@ SELECT p.id_pedido, p.cpf_cliente, e.status_envio, e.codigo_rastreamento
 FROM pedido p
 JOIN envio e ON p.id_pedido = e.id_pedido
 ORDER BY p.id_pedido;
+--
+CREATE OR REPLACE VIEW vw_produtos_mais_vendidos_mes AS
+SELECT 
+    DATE_TRUNC('month', pe.data_pedido) AS mes,
+    pr.nome,
+    SUM(ip.quantidade) AS total_vendido
+FROM item_pedido ip
+JOIN pedido pe ON ip.id_pedido = pe.id_pedido
+JOIN produto pr ON ip.id_produto = pr.id_produto
+GROUP BY mes, pr.nome
+ORDER BY mes, total_vendido DESC;
+-- 
+CREATE OR REPLACE VIEW vw_produtos_menos_vendidos_mes AS
+SELECT 
+    DATE_TRUNC('month', pe.data_pedido) AS mes,
+    pr.nome,
+    SUM(ip.quantidade) AS total_vendido
+FROM item_pedido ip
+JOIN pedido pe ON ip.id_pedido = pe.id_pedido
+JOIN produto pr ON ip.id_produto = pr.id_produto
+GROUP BY mes, pr.nome
+ORDER BY mes, total_vendido ASC;
+--
+CREATE OR REPLACE VIEW vw_produtos_por_marca AS
+SELECT marca, nome AS produto
+FROM produto
+ORDER BY marca, nome;
+--
+CREATE OR REPLACE VIEW vw_ranking_clientes AS
+SELECT u.nome, u.cpf, COUNT(p.id_pedido) AS total_pedidos
+FROM pedido p
+JOIN usuario u ON p.cpf_cliente = u.cpf
+GROUP BY u.nome, u.cpf
+ORDER BY total_pedidos DESC;
+
+
+
+
 
 
 -- Triggers
