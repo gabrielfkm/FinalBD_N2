@@ -6298,109 +6298,910 @@ INSERT INTO PRODUTO (nome, descricao, preco, estoque, id_categoria, marca, codig
   'Positivo Magnam 94ZY', 'Quas non praesentium ab laudantium unde quia architecto ratione quod.', 11355.01, 50, 33, 'Positivo', '6651211468239', 'https://example.com/produtos/1650.jpg', '2024-10-09 19:11:05', TRUE
 );
 
--- TABELA PEDIDO
-INSERT INTO PEDIDO (id_pedido, cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
-VALUES
-(1, '403.691.852-42', '2025-07-13 19:33:52', 0.00, 1),
-(2, '478.653.902-38',  '2025-07-09 13:47:12', 0.00, 2),
-(3, '418.367.950-84',  '2025-07-09 17:38:03', 0.00, 3),
-(4, '035.146.879-00',  '2025-07-08 16:43:02', 0.00, 4),
-(5, '680.957.432-83',  '2025-07-08 15:21:08', 0.00, 5),
-(6, '986.107.524-02',  '2025-07-13 19:43:02', 0.00, 6),
-(7, '402.135.698-33',  '2025-07-11 05:14:21', 0.00, 7),
-(8, '403.176.928-87',  '2025-07-09 16:17:18', 0.00, 8),
-(9, '041.392.657-52',  '2025-07-10 19:44:09', 0.00, 9),
-(10, '105.863.279-59',  '2025-07-10 19:43:02', 0.00, 10),
-(11, '370.589.461-75',  '2025-07-10 19:43:02', 0.00, 11),
-(12, '617.498.503-20',  '2025-07-10 19:43:02', 0.00, 12),
-(13, '948.672.531-46',  '2025-07-10 19:43:02', 0.00, 13),
-(14, '318.047.952-32',  '2025-07-10 19:43:02', 0.00, 14),
-(15, '780.641.925-01',  '2025-07-10 19:43:02', 0.00, 15),
-(16, '604.713.295-25',  '2025-07-10 19:43:02', 0.00, 16),
-(17, '954.260.137-99',  '2025-07-10 19:43:02', 0.00, 17),
-(18, '271.650.489-01',  '2025-07-10 19:43:02', 0.00, 18),
-(19, '814.972.053-79',  '2025-07-10 19:43:02', 0.00, 19),
-(20, '165.478.023-53',  '2025-07-10 19:43:02', 0.00, 20),
-(21, '921.856.430-70',  '2025-07-10 19:43:02', 0.00, 21),
-(22, '705.631.428-71',  '2025-07-10 19:43:02', 0.00, 22),
-(23, '490.712.835-50',  '2025-07-10 19:43:02', 0.00, 23),
-(24, '321.867.045-44',  '2025-07-10 19:43:02', 0.00, 24),
-(25, '627.349.508-47',  '2025-07-10 19:43:02', 0.00, 25),
-(26, '643.129.850-06',  '2025-07-10 19:43:02', 0.00, 26),
-(27, '452.360.798-29',  '2025-07-10 19:43:02', 0.00, 27),
-(28, '017.986.435-10',  '2025-07-10 19:43:02', 0.00, 28),
-(29, '612.870.439-50',  '2025-07-10 19:43:02', 0.00, 29),
-(30, '063.518.974-75',  '2025-07-10 19:43:02', 0.00, 30),
-(31, '279.106.354-43',  '2025-07-10 19:43:02', 0.00, 31),
-(32, '569.203.481-60',  '2025-07-10 19:43:02', 0.00, 32),
-(33, '796.315.482-28',  '2025-07-10 19:43:02', 0.00, 33),
-(34, '640.923.178-40',  '2025-07-10 19:43:02', 0.00, 34),
-(35, '280.396.715-40',  '2025-07-10 19:43:02', 0.00, 35),
-(36, '915.036.827-30',  '2025-07-10 19:43:02', 0.00, 36),
-(37, '063.412.798-50',  '2025-07-10 19:43:02', 0.00, 37),
-(38, '176.028.943-40',  '2025-07-10 19:43:02', 0.00, 38),
-(39, '623.914.705-25',  '2025-07-10 19:43:02', 0.00, 39),
-(40, '639.157.840-01',  '2025-07-10 19:43:02', 0.00, 40),
-(41, '706.129.534-16',  '2025-07-10 19:43:02', 0.00, 41),
-(42, '137.825.406-62',  '2025-07-10 19:43:02', 0.00, 42),
-(43, '263.487.150-35',  '2025-07-10 19:43:02', 0.00, 43),
-(44, '954.263.710-16',  '2025-07-10 19:43:02', 0.00, 44),
-(45, '512.076.934-99',  '2025-07-10 19:43:02', 0.00, 45),
-(46, '692.438.015-89',  '2025-07-10 19:43:02', 0.00, 46),
-(47, '283.591.674-19',  '2025-07-10 19:43:02', 0.00, 47),
-(48, '463.801.927-78',  '2025-07-10 19:43:02', 0.00, 48),
-(49, '384.019.275-79',  '2025-07-10 19:43:02', 0.00, 49),
-(50, '516.803.249-42',  '2025-07-10 19:43:02', 0.00, 50),
-(51, '835.029.417-50',  '2025-07-10 19:43:02', 0.00, 51),
-(52, '094.512.837-14',  '2025-07-10 19:43:02', 0.00, 52),
-(53, '912.746.085-11',  '2025-07-10 19:43:02', 0.00, 53),
-(54, '589.413.267-37',  '2025-07-10 19:43:02', 0.00, 54),
-(55, '970.635.218-02',  '2025-07-10 19:43:02', 0.00, 55),
-(56, '903.671.852-02',  '2025-07-10 19:43:02', 0.00, 56),
-(57, '587.130.296-30',  '2025-07-10 19:43:02', 0.00, 57),
-(58, '735.018.429-88',  '2025-07-10 19:43:02', 0.00, 58),
-(59, '189.570.624-67',  '2025-07-10 19:43:02', 0.00, 59),
-(60, '984.153.720-60',  '2025-07-10 19:43:02', 0.00, 60),
-(61, '581.324.967-28',  '2025-07-10 19:43:02', 0.00, 61),
-(62, '247.560.813-71',  '2025-07-10 19:43:02', 0.00, 62),
-(63, '942.506.371-07',  '2025-07-10 19:43:02', 0.00, 63),
-(64, '507.368.149-57',  '2025-07-10 19:43:02', 0.00, 64),
-(65, '382.506.714-90',  '2025-07-10 19:43:02', 0.00, 65),
-(66, '341.970.562-06',  '2025-07-10 19:43:02', 0.00, 66),
-(67, '627.841.305-17',  '2025-07-10 19:43:02', 0.00, 67),
-(68, '391.208.564-15',  '2025-07-10 19:43:02', 0.00, 68),
-(69, '362.954.018-05',  '2025-07-10 19:43:02', 0.00, 69),
-(70, '341.089.576-01',  '2025-07-10 19:43:02', 0.00, 70),
-(71, '194.530.782-04',  '2025-07-10 19:43:02', 0.00, 71),
-(72, '645.893.720-29',  '2025-07-10 19:43:02', 0.00, 72),
-(73, '013.425.798-79',  '2025-07-10 19:43:02', 0.00, 73),
-(74, '459.782.301-88',  '2025-07-10 19:43:02', 0.00, 74),
-(75, '098.652.371-21',  '2025-07-10 19:43:02', 0.00, 75),
-(76, '751.049.326-99',  '2025-07-10 19:43:02', 0.00, 76),
-(77, '814.072.596-01',  '2025-07-10 19:43:02', 0.00, 77),
-(78, '502.874.391-60',  '2025-07-10 19:43:02', 0.00, 78),
-(79, '651.938.027-02',  '2025-07-10 19:43:02', 0.00, 79),
-(80, '071.564.892-67',  '2025-07-10 19:43:02', 0.00, 80),
-(81, '716.943.805-48',  '2025-07-10 19:43:02', 0.00, 81),
-(82, '897.450.126-02',  '2025-07-10 19:43:02', 0.00, 82),
-(83, '615.837.024-07',  '2025-07-10 19:43:02', 0.00, 83),
-(84, '421.687.053-80',  '2025-07-10 19:43:02', 0.00, 84),
-(85, '419.370.826-87',  '2025-07-10 19:43:02', 0.00, 85),
-(86, '542.871.639-82',  '2025-07-10 19:43:02', 0.00, 86),
-(87, '427.680.539-29',  '2025-07-10 19:43:02', 0.00, 87),
-(88, '520.683.794-65',  '2025-07-10 19:43:02', 0.00, 88),
-(89, '897.263.410-78',  '2025-07-10 19:43:02', 0.00, 89),
-(90, '193.654.807-01',  '2025-07-10 19:43:02', 0.00, 90),
-(91, '615.403.897-66',  '2025-07-10 19:43:02', 0.00, 91),
-(92, '529.671.840-20',  '2025-07-10 19:43:02', 0.00, 92),
-(93, '162.538.470-07',  '2025-07-10 19:43:02', 0.00, 93),
-(94, '750.943.826-83',  '2025-07-10 19:43:02', 0.00, 94),
-(95, '185.327.406-26',  '2025-07-10 19:43:02', 0.00, 95),
-(96, '154.620.379-61',  '2025-07-10 19:43:02', 0.00, 96),
-(97, '390.472.851-23',  '2025-07-10 19:43:02', 0.00, 97),
-(98, '590.768.423-29',  '2025-07-10 19:43:02', 0.00, 98),
-(99, '793.128.054-79',  '2025-07-10 19:43:02', 0.00, 99),
-(100, '126.857.034-62',  '2NOW()025-07-10 19:43:02', 0.00, 100);
+
+
+-- INSERÇÃO DA TABELA PEDIDO E PAGAMENTO COM TRANSAÇÕES 
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:33:52', 'Finalizado', 195.45, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 195.45, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:34:52', 'Finalizado', 360.46, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 360.46, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:35:52', 'Finalizado', 217.8, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 217.8, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:36:52', 'Finalizado', 414.65, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 414.65, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:37:52', 'Finalizado', 224.29, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 224.29, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:38:52', 'Finalizado', 204.4, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 204.4, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:39:52', 'Finalizado', 376.6, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 376.6, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:40:52', 'Finalizado', 182.78, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 182.78, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:41:52', 'Finalizado', 274.07, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 274.07, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:42:52', 'Finalizado', 306.5, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 306.5, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:43:52', 'Finalizado', 376.88, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 376.88, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:44:52', 'Finalizado', 282.48, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 282.48, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:45:52', 'Finalizado', 173.32, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 173.32, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:46:52', 'Finalizado', 299.28, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 299.28, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:47:52', 'Finalizado', 284.71, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 284.71, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:48:52', 'Finalizado', 212.62, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 212.62, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:49:52', 'Finalizado', 289.04, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 289.04, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:50:52', 'Finalizado', 171.09, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 171.09, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:51:52', 'Finalizado', 273.67, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 273.67, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:52:52', 'Finalizado', 350.31, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 350.31, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:53:52', 'Finalizado', 363.56, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 363.56, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:54:52', 'Finalizado', 101.24, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 101.24, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:55:52', 'Finalizado', 228.4, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 228.4, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:56:52', 'Finalizado', 458.53, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 458.53, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:57:52', 'Finalizado', 415.96, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 415.96, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 19:58:52', 'Finalizado', 141.24, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 141.24, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 19:59:52', 'Finalizado', 263.79, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 263.79, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:00:52', 'Finalizado', 324.61, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 324.61, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:01:52', 'Finalizado', 130.56, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 130.56, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:02:52', 'Finalizado', 288.34, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 288.34, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:03:52', 'Finalizado', 433.71, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 433.71, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:04:52', 'Finalizado', 349.93, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 349.93, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:05:52', 'Finalizado', 360.3, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 360.3, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:06:52', 'Finalizado', 173.49, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 173.49, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:07:52', 'Finalizado', 161.84, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 161.84, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:08:52', 'Finalizado', 386.39, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 386.39, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:09:52', 'Finalizado', 290.49, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 290.49, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:10:52', 'Finalizado', 243.15, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 243.15, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:11:52', 'Finalizado', 208.98, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 208.98, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:12:52', 'Finalizado', 427.61, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 427.61, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:13:52', 'Finalizado', 456.89, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 456.89, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:14:52', 'Finalizado', 414.87, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 414.87, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:15:52', 'Finalizado', 152.34, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 152.34, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:16:52', 'Finalizado', 479.74, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 479.74, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:17:52', 'Finalizado', 354.3, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 354.3, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:18:52', 'Finalizado', 285.3, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 285.3, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:19:52', 'Finalizado', 162.78, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 162.78, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:20:52', 'Finalizado', 277.69, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 277.69, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:21:52', 'Finalizado', 196.19, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 196.19, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:22:52', 'Finalizado', 337.25, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 337.25, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:23:52', 'Finalizado', 432.79, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 432.79, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:24:52', 'Finalizado', 447.02, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 447.02, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:25:52', 'Finalizado', 493.68, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 493.68, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:26:52', 'Finalizado', 204.98, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 204.98, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:27:52', 'Finalizado', 449.97, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 449.97, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:28:52', 'Finalizado', 443.61, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 443.61, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:29:52', 'Finalizado', 280.82, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 280.82, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:30:52', 'Finalizado', 459.95, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 459.95, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:31:52', 'Finalizado', 399.4, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 399.4, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+START TRANSACTION;
+
+-- Inserir pedido com status Finalizado
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:32:52', 'Finalizado', 345.33, 1);
+
+-- Inserir pagamento para o pedido finalizado
+INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
+VALUES (LAST_INSERT_ID(), NOW(), 345.33, 'Cartão de Crédito', 'Pago');
+
+COMMIT;
+
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:33:52', 'Em processamento', 262.59, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:34:52', 'Em processamento', 454.26, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:35:52', 'Em processamento', 138.81, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:36:52', 'Em processamento', 309.96, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:37:52', 'Em processamento', 190.75, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:38:52', 'Em processamento', 464.99, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:39:52', 'Em processamento', 282.18, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:40:52', 'Em processamento', 413.57, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:41:52', 'Em processamento', 127.05, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:42:52', 'Em processamento', 189.14, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:43:52', 'Em processamento', 140.35, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:44:52', 'Em processamento', 171.8, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:45:52', 'Em processamento', 483.16, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:46:52', 'Em processamento', 178.59, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:47:52', 'Em processamento', 415.77, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:48:52', 'Em processamento', 367.35, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:49:52', 'Em processamento', 226.92, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:50:52', 'Em processamento', 203.9, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:51:52', 'Em processamento', 386.79, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:52:52', 'Em processamento', 252.62, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:53:52', 'Em processamento', 360.44, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:54:52', 'Em processamento', 210.24, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:55:52', 'Em processamento', 305.3, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:56:52', 'Em processamento', 181.4, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:57:52', 'Em processamento', 397.92, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 20:58:52', 'Em processamento', 252.3, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 20:59:52', 'Em processamento', 386.68, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 21:00:52', 'Em processamento', 428.22, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:01:52', 'Em processamento', 285.58, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:02:52', 'Em processamento', 357.47, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:03:52', 'Em processamento', 116.09, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 21:04:52', 'Em processamento', 434.44, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 21:05:52', 'Em processamento', 448.55, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:06:52', 'Em processamento', 456.19, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 21:07:52', 'Em processamento', 398.53, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 21:08:52', 'Em processamento', 203.45, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('403.691.852-42', '2025-07-13 21:09:52', 'Em processamento', 299.11, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:10:52', 'Em processamento', 448.23, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:11:52', 'Em processamento', 478.82, 1);
+
+INSERT INTO PEDIDO (cpf_cliente, data_pedido, status, valor_total, endereco_entrega_id)
+VALUES ('111.222.333-44', '2025-07-13 21:12:52', 'Em processamento', 297.61, 1);
+
 
 
 -- TABELA ITEM PEDIDO
@@ -6738,108 +7539,6 @@ INSERT INTO ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario) VALU
 INSERT INTO ITEM_PEDIDO (id_pedido, id_produto, quantidade, preco_unitario) VALUES (100, 840, 3, 5992.38);
 
 -- TABELA PAGAMENTO 
-INSERT INTO PAGAMENTO (id_pedido, data_pagamento, valor, forma_pagamento, status)
-VALUES
-(1, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(2, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(3, '2025-07-09 19:43:02', 100.00, 'PIX', 'Pendente'),
-(4, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(5, '2025-07-08 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(6, '2025-07-13 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(7, '2025-07-11 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(8, '2025-07-09 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(9, '2025-07-10 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(10, '2025-07-05 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(11, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(12, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(13, '2025-07-12 19:43:02', 100.00, 'PIX', 'Pendente'),
-(14, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(15, '2025-07-09 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(16, '2025-07-13 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(17, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(18, '2025-07-06 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(19, '2025-07-13 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(20, '2025-07-07 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(21, '2025-07-11 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(22, '2025-07-05 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(23, '2025-07-11 19:43:02', 100.00, 'PIX', 'Recusado'),
-(24, '2025-07-11 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(25, '2025-07-10 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(26, '2025-07-12 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(27, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(28, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(29, '2025-07-10 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(30, '2025-07-08 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(31, '2025-07-07 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(32, '2025-07-07 19:43:02', 100.00, 'PIX', 'Recusado'),
-(33, '2025-07-08 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(34, '2025-07-10 19:43:02', 100.00, 'PIX', 'Pendente'),
-(35, '2025-07-06 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(36, '2025-07-12 19:43:02', 100.00, 'PIX', 'Recusado'),
-(37, '2025-07-12 19:43:02', 100.00, 'PIX', 'Pendente'),
-(38, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(39, '2025-07-14 19:43:02', 100.00, 'PIX', 'Pendente'),
-(40, '2025-07-09 19:43:02', 100.00, 'PIX', 'Pendente'),
-(41, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(42, '2025-07-10 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(43, '2025-07-12 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(44, '2025-07-10 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(45, '2025-07-05 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(46, '2025-07-08 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(47, '2025-07-05 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(48, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(49, '2025-07-10 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(50, '2025-07-10 19:43:02', 100.00, 'PIX', 'Recusado'),
-(51, '2025-07-11 19:43:02', 100.00, 'PIX', 'Recusado'),
-(52, '2025-07-05 19:43:02', 100.00, 'PIX', 'Pendente'),
-(53, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(54, '2025-07-13 19:43:02', 100.00, 'PIX', 'Pendente'),
-(55, '2025-07-09 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(56, '2025-07-08 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(57, '2025-07-07 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(58, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(59, '2025-07-09 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(60, '2025-07-07 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(61, '2025-07-14 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(62, '2025-07-12 19:43:02', 100.00, 'PIX', 'Pendente'),
-(63, '2025-07-12 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(64, '2025-07-06 19:43:02', 100.00, 'PIX', 'Pendente'),
-(65, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(66, '2025-07-07 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(67, '2025-07-08 19:43:02', 100.00, 'PIX', 'Recusado'),
-(68, '2025-07-11 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(69, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(70, '2025-07-06 19:43:02', 100.00, 'PIX', 'Pendente'),
-(71, '2025-07-08 19:43:02', 100.00, 'PIX', 'Recusado'),
-(72, '2025-07-05 19:43:02', 100.00, 'PIX', 'Pendente'),
-(73, '2025-07-06 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(74, '2025-07-06 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(75, '2025-07-07 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(76, '2025-07-06 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(77, '2025-07-06 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(78, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Recusado'),
-(79, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(80, '2025-07-09 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(81, '2025-07-06 19:43:02', 100.00, 'Boleto', 'Recusado'),
-(82, '2025-07-09 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(83, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado'),
-(84, '2025-07-07 19:43:02', 100.00, 'PIX', 'Pendente'),
-(85, '2025-07-08 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(86, '2025-07-06 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(87, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(88, '2025-07-09 19:43:02', 100.00, 'PIX', 'Pendente'),
-(89, '2025-07-14 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(90, '2025-07-08 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(91, '2025-07-11 19:43:02', 100.00, 'Boleto', 'Aprovado'),
-(92, '2025-07-12 19:43:02', 100.00, 'PIX', 'Recusado'),
-(93, '2025-07-06 19:43:02', 100.00, 'PIX', 'Recusado'),
-(94, '2025-07-05 19:43:02', 100.00, 'PIX', 'Pendente'),
-(95, '2025-07-07 19:43:02', 100.00, 'PIX', 'Aprovado'),
-(96, '2025-07-14 19:43:02', 100.00, 'PIX', 'Pendente'),
-(97, '2025-07-05 19:43:02', 100.00, 'Boleto', 'Pendente'),
-(98, '2025-07-05 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(99, '2025-07-11 19:43:02', 100.00, 'Cartão de Crédito', 'Pendente'),
-(100, '2025-07-14 19:43:02', 100.00, 'Cartão de Crédito', 'Aprovado');
 
 -- TABELA ENVIO
 INSERT INTO ENVIO (id_pedido, data_envio, transportadora, codigo_rastreamento, status_envio)
@@ -7056,47 +7755,7 @@ END;
 DELIMITER ;
 
 -- Do BD
--- atualiza o status de PEDIDO conforme ENVIO e PAGAMENTO 
-CREATE OR REPLACE FUNCTION fn_update_status_after_payment()
-RETURNS TRIGGER AS $$
-BEGIN  IF NEW.status = 'Pendente' THEN
-    UPDATE pedido SET status = 'Aguardando pagamento' WHERE id_pedido = NEW.id_pedido;
-    UPDATE envio SET status = 'Aguardando pagamento' WHERE id_pedido = NEW.id_pedido;
-  ELSIF NEW.status = 'Aprovado' THEN
-    UPDATE pedido SET status = 'Aguardando envio' WHERE id_pedido = NEW.id_pedido;
-    UPDATE envio SET status = 'Aguardando envio' WHERE id_pedido = NEW.id_pedido;
-  ELSIF NEW.status = 'Recusado' THEN
-    UPDATE pedido SET status = 'Pedido não aprovado' WHERE id_pedido = NEW.id_pedido;
-    UPDATE envio SET status = 'Pedido não aprovado' WHERE id_pedido = NEW.id_pedido;
-  END IF;
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
 
-CREATE TRIGGER trg_update_status_after_payment
-AFTER UPDATE OF status ON pagamento
-FOR EACH ROW
-EXECUTE FUNCTION fn_update_status_after_payment();
-
--- atualiza o status de PEDIDO conforme ENVIO entra em enviado, entregue ou em transporte.
-CREATE OR REPLACE FUNCTION fn_update_status_after_envio()
-RETURNS TRIGGER AS $$
-BEGIN
-  IF NEW.status = 'Enviado' THEN
-    UPDATE pedido SET status = 'Enviado' WHERE id_pedido = NEW.id_pedido;
-  ELSIF NEW.status = 'Em transporte' THEN
-    UPDATE pedido SET status = 'Em transporte' WHERE id_pedido = NEW.id_pedido;
-  ELSIF NEW.status = 'Entregue' THEN
-    UPDATE pedido SET status = 'Entregue' WHERE id_pedido = NEW.id_pedido;
-  END IF;
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER trg_update_status_after_envio
-AFTER UPDATE OF status ON envio
-FOR EACH ROW
-EXECUTE FUNCTION fn_update_status_after_envio();
 
 -- atualiza o valor total de PEDIDO pela multiplicação de quantidade e preco_unitario de ITEMPEDIDO 
 DELIMITER //
