@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cartela Detetive</title>
   <style>
+    :root {
+      --verde: #1b5e20;
+      --verde-claro: #2e7d32;
+      --verde-escuro: #0d3d14;
+    }
+
     body {
       font-family: Arial, sans-serif;
       background: #e5e5e5;
@@ -15,66 +21,86 @@
 
     .cartela {
       background: white;
-      border: 2px solid black;
-      width: 320px;
+      border: 2px solid var(--verde);
+      width: 100%;
+      max-width: 400px;
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      overflow: hidden;
     }
 
     .titulo {
-      background: black;
+      background: var(--verde);
       color: white;
       text-align: center;
-      font-size: 20px;
+      font-size: 22px;
       font-weight: bold;
-      padding: 8px;
+      padding: 10px;
       letter-spacing: 2px;
     }
 
-    .secao {
-      display: grid;
-      grid-template-columns: 70px auto 50px;
-      align-items: center;
-      border-bottom: 2px solid black;
-    }
-
     .secao-nome {
-      grid-column: 1 / span 3;
-      background: black;
+      background: var(--verde-claro);
       color: white;
       font-weight: bold;
       text-align: center;
-      padding: 5px;
-      letter-spacing: 1px;
-    }
-
-    .item {
-      display: contents;
-    }
-
-    .label {
-      grid-column: 2;
       padding: 6px;
-      border-bottom: 1px solid #ccc;
-      font-size: 14px;
+      letter-spacing: 1px;
+      font-size: 16px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      font-size: 15px;
+    }
+
+    td:first-child {
+      width: 80%;
     }
 
     .checkbox {
-      grid-column: 3;
-      border: 2px solid black;
-      width: 22px;
-      height: 22px;
+      width: 28px;
+      height: 28px;
+      border: 2px solid var(--verde);
+      border-radius: 4px;
+      cursor: pointer;
       display: flex;
       align-items: center;
       justify-content: center;
-      cursor: pointer;
-      font-size: 16px;
+      font-size: 18px;
       font-weight: bold;
       user-select: none;
+      color: transparent;
+      transition: all 0.2s;
     }
 
     .checked {
-      background: black;
+      background: var(--verde);
       color: white;
+    }
+
+    /* Responsividade */
+    @media (max-width: 500px) {
+      .cartela {
+        max-width: 95%;
+      }
+
+      td {
+        font-size: 14px;
+        padding: 6px;
+      }
+
+      .checkbox {
+        width: 24px;
+        height: 24px;
+        font-size: 16px;
+      }
     }
   </style>
 </head>
@@ -84,49 +110,49 @@
 
     <!-- Suspeitos -->
     <div class="secao-nome">SUSPEITOS</div>
-    <div class="secao">
-      <div></div><div class="label">Sargento Bigode</div><div class="checkbox">X</div>
-      <div></div><div class="label">Florista Dona Branca</div><div class="checkbox">X</div>
-      <div></div><div class="label">Chef Tony Gourmet</div><div class="checkbox">X</div>
-      <div></div><div class="label">Mordomo James</div><div class="checkbox">X</div>
-      <div></div><div class="label">Médica Dona Violeta</div><div class="checkbox">X</div>
-      <div></div><div class="label">Dançarina Srta. Rosa</div><div class="checkbox">X</div>
-      <div></div><div class="label">Coveiro Sérgio Soturno</div><div class="checkbox">X</div>
-      <div></div><div class="label">Advogado Sr. Marinho</div><div class="checkbox">X</div>
-    </div>
+    <table>
+      <tr><td>Sargento Bigode</td><td class="checkbox">X</td></tr>
+      <tr><td>Florista Dona Branca</td><td class="checkbox">X</td></tr>
+      <tr><td>Chef Tony Gourmet</td><td class="checkbox">X</td></tr>
+      <tr><td>Mordomo James</td><td class="checkbox">X</td></tr>
+      <tr><td>Médica Dona Violeta</td><td class="checkbox">X</td></tr>
+      <tr><td>Dançarina Srta. Rosa</td><td class="checkbox">X</td></tr>
+      <tr><td>Coveiro Sérgio Soturno</td><td class="checkbox">X</td></tr>
+      <tr><td>Advogado Sr. Marinho</td><td class="checkbox">X</td></tr>
+    </table>
 
     <!-- Armas -->
     <div class="secao-nome">ARMAS</div>
-    <div class="secao">
-      <div></div><div class="label">Espingarda</div><div class="checkbox">X</div>
-      <div></div><div class="label">Pá</div><div class="checkbox">X</div>
-      <div></div><div class="label">Pé de Cabra</div><div class="checkbox">X</div>
-      <div></div><div class="label">Tesoura</div><div class="checkbox">X</div>
-      <div></div><div class="label">Arma Química</div><div class="checkbox">X</div>
-      <div></div><div class="label">Veneno</div><div class="checkbox">X</div>
-      <div></div><div class="label">Soco Inglês</div><div class="checkbox">X</div>
-      <div></div><div class="label">Faca</div><div class="checkbox">X</div>
-    </div>
+    <table>
+      <tr><td>Espingarda</td><td class="checkbox">X</td></tr>
+      <tr><td>Pá</td><td class="checkbox">X</td></tr>
+      <tr><td>Pé de Cabra</td><td class="checkbox">X</td></tr>
+      <tr><td>Tesoura</td><td class="checkbox">X</td></tr>
+      <tr><td>Arma Química</td><td class="checkbox">X</td></tr>
+      <tr><td>Veneno</td><td class="checkbox">X</td></tr>
+      <tr><td>Soco Inglês</td><td class="checkbox">X</td></tr>
+      <tr><td>Faca</td><td class="checkbox">X</td></tr>
+    </table>
 
     <!-- Locais -->
     <div class="secao-nome">LOCAIS</div>
-    <div class="secao">
-      <div></div><div class="label">Prefeitura</div><div class="checkbox">X</div>
-      <div></div><div class="label">Restaurante</div><div class="checkbox">X</div>
-      <div></div><div class="label">Floricultura</div><div class="checkbox">X</div>
-      <div></div><div class="label">Boate</div><div class="checkbox">X</div>
-      <div></div><div class="label">Hospital</div><div class="checkbox">X</div>
-      <div></div><div class="label">Mansão</div><div class="checkbox">X</div>
-      <div></div><div class="label">Cemitério</div><div class="checkbox">X</div>
-      <div></div><div class="label">Praça</div><div class="checkbox">X</div>
-      <div></div><div class="label">Hotel</div><div class="checkbox">X</div>
-      <div></div><div class="label">Banco</div><div class="checkbox">X</div>
-      <div></div><div class="label">Estação de Trem</div><div class="checkbox">X</div>
-    </div>
+    <table>
+      <tr><td>Prefeitura</td><td class="checkbox">X</td></tr>
+      <tr><td>Restaurante</td><td class="checkbox">X</td></tr>
+      <tr><td>Floricultura</td><td class="checkbox">X</td></tr>
+      <tr><td>Boate</td><td class="checkbox">X</td></tr>
+      <tr><td>Hospital</td><td class="checkbox">X</td></tr>
+      <tr><td>Mansão</td><td class="checkbox">X</td></tr>
+      <tr><td>Cemitério</td><td class="checkbox">X</td></tr>
+      <tr><td>Praça</td><td class="checkbox">X</td></tr>
+      <tr><td>Hotel</td><td class="checkbox">X</td></tr>
+      <tr><td>Banco</td><td class="checkbox">X</td></tr>
+      <tr><td>Estação de Trem</td><td class="checkbox">X</td></tr>
+    </table>
   </div>
 
   <script>
-    // Marca e desmarca ao clicar
+    // Alterna cor e X ao clicar
     document.querySelectorAll(".checkbox").forEach(box => {
       box.addEventListener("click", () => {
         box.classList.toggle("checked");
@@ -134,4 +160,4 @@
     });
   </script>
 </body>
-  </html>
+</html>
