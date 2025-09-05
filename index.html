@@ -9,21 +9,30 @@
       --verde: #1b5e20;
       --verde-claro: #2e7d32;
       --verde-escuro: #0d3d14;
+      --cinza: #f5f5f5;
     }
 
     body {
       font-family: Arial, sans-serif;
       background: #e5e5e5;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       padding: 20px;
+      margin: 0;
+    }
+
+    .container {
+      display: flex;
+      gap: 20px;
+      width: 100%;
+      max-width: 1100px;
     }
 
     .cartela {
       background: white;
       border: 2px solid var(--verde);
-      width: 100%;
-      max-width: 400px;
+      width: 55%;
       box-shadow: 0 3px 6px rgba(0,0,0,0.2);
       border-radius: 8px;
       overflow: hidden;
@@ -61,12 +70,13 @@
     }
 
     td:first-child {
-      width: 80%;
+      width: 40px;
+      text-align: center;
     }
 
     .checkbox {
-      width: 28px;
-      height: 28px;
+      width: 24px;
+      height: 24px;
       border: 2px solid var(--verde);
       border-radius: 4px;
       cursor: pointer;
@@ -78,6 +88,7 @@
       user-select: none;
       color: transparent;
       transition: all 0.2s;
+      margin: auto;
     }
 
     .checked {
@@ -85,79 +96,261 @@
       color: white;
     }
 
-    /* Responsividade */
-    @media (max-width: 500px) {
-      .cartela {
-        max-width: 95%;
-      }
+    /* Área de jogadores */
+    .jogadores {
+      background: white;
+      border: 2px solid var(--verde);
+      width: 45%;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      border-radius: 8px;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
 
-      td {
-        font-size: 14px;
-        padding: 6px;
-      }
+    .jogadores-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
 
-      .checkbox {
-        width: 24px;
-        height: 24px;
-        font-size: 16px;
+    .jogadores-header h2 {
+      margin: 0;
+      color: var(--verde-escuro);
+    }
+
+    .btn-add {
+      padding: 6px 10px;
+      background: var(--verde);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn-add:hover {
+      background: var(--verde-claro);
+    }
+
+    .jogador {
+      background: var(--cinza);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .jogador-header {
+      background: var(--verde-claro);
+      color: white;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .jogador-header h3 {
+      margin: 0;
+    }
+
+    .btn-remove {
+      background: #c62828;
+      border: none;
+      color: white;
+      padding: 4px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+
+    .btn-remove:hover {
+      background: #b71c1c;
+    }
+
+    .jogador-body {
+      display: none;
+      padding: 10px;
+      background: white;
+      border-top: 1px solid #ccc;
+    }
+
+    .categoria {
+      margin-bottom: 10px;
+    }
+
+    .categoria h4 {
+      margin-bottom: 6px;
+      color: var(--verde-escuro);
+    }
+
+    .categoria label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+      cursor: pointer;
+    }
+
+    .comentarios {
+      margin-top: 15px;
+      background: white;
+      border: 2px solid var(--verde);
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      max-width: 1100px;
+      width: 100%;
+    }
+
+    .comentarios h3 {
+      margin: 0 0 6px 0;
+      font-size: 18px;
+      color: var(--verde-escuro);
+    }
+
+    .comentarios textarea {
+      width: 100%;
+      height: 100px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 6px;
+      font-size: 14px;
+      resize: none;
+    }
+
+    @media (max-width: 900px) {
+      .container {
+        flex-direction: column;
+      }
+      .cartela, .jogadores {
+        width: 100%;
       }
     }
   </style>
 </head>
 <body>
-  <div class="cartela">
-    <div class="titulo">DETECTIVE</div>
+  <div class="container">
+    <!-- Cartela -->
+    <div class="cartela">
+      <div class="titulo">DETECTIVE</div>
 
-    <!-- Suspeitos -->
-    <div class="secao-nome">SUSPEITOS</div>
-    <table>
-      <tr><td>Sargento Bigode</td><td class="checkbox">X</td></tr>
-      <tr><td>Florista Dona Branca</td><td class="checkbox">X</td></tr>
-      <tr><td>Chef Tony Gourmet</td><td class="checkbox">X</td></tr>
-      <tr><td>Mordomo James</td><td class="checkbox">X</td></tr>
-      <tr><td>Médica Dona Violeta</td><td class="checkbox">X</td></tr>
-      <tr><td>Dançarina Srta. Rosa</td><td class="checkbox">X</td></tr>
-      <tr><td>Coveiro Sérgio Soturno</td><td class="checkbox">X</td></tr>
-      <tr><td>Advogado Sr. Marinho</td><td class="checkbox">X</td></tr>
-    </table>
+      <!-- Suspeitos -->
+      <div class="secao-nome">SUSPEITOS</div>
+      <table>
+        <tr><td><div class="checkbox"></div></td><td>Sargento Bigode</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Florista Dona Branca</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Chef Tony Gourmet</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Mordomo James</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Médica Dona Violeta</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Dançarina Srta. Rosa</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Coveiro Sérgio Soturno</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Advogado Sr. Marinho</td></tr>
+      </table>
 
-    <!-- Armas -->
-    <div class="secao-nome">ARMAS</div>
-    <table>
-      <tr><td>Espingarda</td><td class="checkbox">X</td></tr>
-      <tr><td>Pá</td><td class="checkbox">X</td></tr>
-      <tr><td>Pé de Cabra</td><td class="checkbox">X</td></tr>
-      <tr><td>Tesoura</td><td class="checkbox">X</td></tr>
-      <tr><td>Arma Química</td><td class="checkbox">X</td></tr>
-      <tr><td>Veneno</td><td class="checkbox">X</td></tr>
-      <tr><td>Soco Inglês</td><td class="checkbox">X</td></tr>
-      <tr><td>Faca</td><td class="checkbox">X</td></tr>
-    </table>
+      <!-- Armas -->
+      <div class="secao-nome">ARMAS</div>
+      <table>
+        <tr><td><div class="checkbox"></div></td><td>Espingarda</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Pá</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Pé de Cabra</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Tesoura</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Arma Química</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Veneno</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Soco Inglês</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Faca</td></tr>
+      </table>
 
-    <!-- Locais -->
-    <div class="secao-nome">LOCAIS</div>
-    <table>
-      <tr><td>Prefeitura</td><td class="checkbox">X</td></tr>
-      <tr><td>Restaurante</td><td class="checkbox">X</td></tr>
-      <tr><td>Floricultura</td><td class="checkbox">X</td></tr>
-      <tr><td>Boate</td><td class="checkbox">X</td></tr>
-      <tr><td>Hospital</td><td class="checkbox">X</td></tr>
-      <tr><td>Mansão</td><td class="checkbox">X</td></tr>
-      <tr><td>Cemitério</td><td class="checkbox">X</td></tr>
-      <tr><td>Praça</td><td class="checkbox">X</td></tr>
-      <tr><td>Hotel</td><td class="checkbox">X</td></tr>
-      <tr><td>Banco</td><td class="checkbox">X</td></tr>
-      <tr><td>Estação de Trem</td><td class="checkbox">X</td></tr>
-    </table>
+      <!-- Locais -->
+      <div class="secao-nome">LOCAIS</div>
+      <table>
+        <tr><td><div class="checkbox"></div></td><td>Prefeitura</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Restaurante</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Floricultura</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Boate</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Hospital</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Mansão</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Cemitério</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Praça</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Hotel</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Banco</td></tr>
+        <tr><td><div class="checkbox"></div></td><td>Estação de Trem</td></tr>
+      </table>
+    </div>
+
+    <!-- Jogadores Dinâmicos -->
+    <div class="jogadores">
+      <div class="jogadores-header">
+        <h2>Jogadores</h2>
+        <button class="btn-add" onclick="adicionarJogador()">+ Adicionar</button>
+      </div>
+      <div id="lista-jogadores"></div>
+    </div>
+  </div>
+
+  <!-- Comentários -->
+  <div class="comentarios">
+    <h3>Comentários</h3>
+    <textarea placeholder="Anote aqui suas deduções, pistas e observações..."></textarea>
   </div>
 
   <script>
-    // Alterna cor e X ao clicar
+    // Alterna cor e check na cartela principal
     document.querySelectorAll(".checkbox").forEach(box => {
       box.addEventListener("click", () => {
         box.classList.toggle("checked");
+        box.textContent = box.classList.contains("checked") ? "✔" : "";
       });
     });
+
+    // Listas fixas
+    const pessoas = ["Sargento Bigode","Florista Dona Branca","Chef Tony Gourmet","Mordomo James","Médica Dona Violeta","Dançarina Srta. Rosa","Coveiro Sérgio Soturno","Advogado Sr. Marinho"];
+    const armas = ["Espingarda","Pá","Pé de Cabra","Tesoura","Arma Química","Veneno","Soco Inglês","Faca"];
+    const locais = ["Prefeitura","Restaurante","Floricultura","Boate","Hospital","Mansão","Cemitério","Praça","Hotel","Banco","Estação de Trem"];
+
+    let contadorJogadores = 0;
+
+    function criarLista(titulo, itens) {
+      let html = `<div class="categoria"><h4>${titulo}</h4>`;
+      itens.forEach(item => {
+        html += `<label><input type="checkbox"> ${item}</label>`;
+      });
+      html += "</div>";
+      return html;
+    }
+
+    function adicionarJogador() {
+      contadorJogadores++;
+      const container = document.createElement("div");
+      container.classList.add("jogador");
+
+      container.innerHTML = `
+        <div class="jogador-header" onclick="toggleJogador(this)">
+          <h3>Jogador ${contadorJogadores}</h3>
+          <button class="btn-remove" onclick="removerJogador(this, event)">Remover</button>
+        </div>
+        <div class="jogador-body">
+          ${criarLista("Pessoas", pessoas)}
+          ${criarLista("Armas", armas)}
+          ${criarLista("Locais", locais)}
+        </div>
+      `;
+
+      document.getElementById("lista-jogadores").appendChild(container);
+    }
+
+    function removerJogador(botao, event) {
+      event.stopPropagation();
+      botao.closest(".jogador").remove();
+    }
+
+    function toggleJogador(header) {
+      const body = header.nextElementSibling;
+      body.style.display = body.style.display === "block" ? "none" : "block";
+    }
   </script>
 </body>
 </html>
