@@ -157,6 +157,16 @@
       margin: 0;
     }
 
+    .jogador-header input {
+      background: transparent;
+      border: none;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      outline: none;
+      width: 150px;
+    }
+
     .btn-remove {
       background: #c62828;
       border: none;
@@ -298,7 +308,6 @@
   </div>
 
   <script>
-    // Alterna cor e check na cartela principal
     document.querySelectorAll(".checkbox").forEach(box => {
       box.addEventListener("click", () => {
         box.classList.toggle("checked");
@@ -306,7 +315,6 @@
       });
     });
 
-    // Listas fixas
     const pessoas = ["Sargento Bigode","Florista Dona Branca","Chef Tony Gourmet","Mordomo James","Médica Dona Violeta","Dançarina Srta. Rosa","Coveiro Sérgio Soturno","Advogado Sr. Marinho"];
     const armas = ["Espingarda","Pá","Pé de Cabra","Tesoura","Arma Química","Veneno","Soco Inglês","Faca"];
     const locais = ["Prefeitura","Restaurante","Floricultura","Boate","Hospital","Mansão","Cemitério","Praça","Hotel","Banco","Estação de Trem"];
@@ -329,7 +337,7 @@
 
       container.innerHTML = `
         <div class="jogador-header" onclick="toggleJogador(this)">
-          <h3>Jogador ${contadorJogadores}</h3>
+          <input type="text" placeholder="Nome do jogador" value="Jogador ${contadorJogadores}" onclick="event.stopPropagation()" />
           <button class="btn-remove" onclick="removerJogador(this, event)">Remover</button>
         </div>
         <div class="jogador-body">
